@@ -1,4 +1,4 @@
-import { ckArrayEditorSheet, ckArrayEditorCSS } from './hello.world.styles';
+import { ckArrayEditorSheet, ckArrayEditorCSS } from './ck.array.editor.styles';
 
 export class CkArrayEditor extends HTMLElement {
   private shadow: ShadowRoot;
@@ -89,4 +89,5 @@ export class CkArrayEditor extends HTMLElement {
 if (!customElements.get('ck-array-editor')) {
   customElements.define('ck-array-editor', CkArrayEditor);
 }
+
 
