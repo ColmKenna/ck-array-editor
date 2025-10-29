@@ -1,18 +1,18 @@
-import { HelloWorld } from '../../src/components/hello-world/hello.world';
+import { CkArrayEditor } from '../../src/components/ck-array-editor/ck.array.editor';
 
 // Define the custom element before running tests
 beforeAll(() => {
-  if (!customElements.get('hello-world')) {
-    customElements.define('hello-world', HelloWorld);
+  if (!customElements.get('ck-array-editor')) {
+    customElements.define('ck-array-editor', CkArrayEditor);
   }
 });
 
-describe('HelloWorld Component', () => {
-  let element: HelloWorld;
+describe('CkArrayEditor Component', () => {
+  let element: CkArrayEditor;
 
   beforeEach(() => {
     // Create a fresh instance for each test
-    element = new HelloWorld();
+    element = new CkArrayEditor();
     document.body.appendChild(element);
   });
 
@@ -24,7 +24,7 @@ describe('HelloWorld Component', () => {
   });
 
   test('should create an instance', () => {
-    expect(element).toBeInstanceOf(HelloWorld);
+    expect(element).toBeInstanceOf(CkArrayEditor);
     expect(element).toBeInstanceOf(HTMLElement);
   });
 
@@ -61,7 +61,7 @@ describe('HelloWorld Component', () => {
   });
 
   test('should observe name and color attributes', () => {
-    const observedAttributes = HelloWorld.observedAttributes;
+    const observedAttributes = CkArrayEditor.observedAttributes;
     expect(observedAttributes).toContain('name');
     expect(observedAttributes).toContain('color');
   });
@@ -74,3 +74,4 @@ describe('HelloWorld Component', () => {
     expect(shadowContent).toContain('blue');
   });
 });
+
