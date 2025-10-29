@@ -1,5 +1,5 @@
 {
-    "name":  "@colmkenna/ck-webcomponents/ck-array-editor",
+    "name":  "@colmkenna/ck-array-editor",
     "version":  "1.0.0",
     "type":  "module",
     "description":  "A web component library featuring ck-array-editor.",
