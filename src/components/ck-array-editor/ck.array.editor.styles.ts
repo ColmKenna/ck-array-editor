@@ -5,7 +5,7 @@ export const ckArrayEditorCSS = `
   font-family: Arial, sans-serif;
 }
 
-\.ck-array-editor {
+.ck-array-editor {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   padding: 2rem;
@@ -15,7 +15,7 @@ export const ckArrayEditorCSS = `
   transition: transform 0.2s ease;
 }
 
-\.ck-array-editor:hover {
+.ck-array-editor:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
