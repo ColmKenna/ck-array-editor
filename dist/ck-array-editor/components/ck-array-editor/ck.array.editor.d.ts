@@ -1,4 +1,4 @@
-export declare class HelloWorld extends HTMLElement {
+export declare class CkArrayEditor extends HTMLElement {
     private shadow;
     constructor();
     connectedCallback(): void;

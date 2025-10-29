@@ -74,4 +74,3 @@ describe('CkArrayEditor Component', () => {
     expect(shadowContent).toContain('blue');
   });
 });
-

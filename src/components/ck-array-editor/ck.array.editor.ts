@@ -89,5 +89,3 @@ export class CkArrayEditor extends HTMLElement {
 if (!customElements.get('ck-array-editor')) {
   customElements.define('ck-array-editor', CkArrayEditor);
 }
-
-
