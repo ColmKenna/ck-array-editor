@@ -1,6 +1,6 @@
-import { helloWorldSheet, helloWorldCSS } from './hello.world.styles';
+import { ckArrayEditorSheet, ckArrayEditorCSS } from './ck.array.editor.styles';
 
-export class HelloWorld extends HTMLElement {
+export class CkArrayEditor extends HTMLElement {
   private shadow: ShadowRoot;
 
   constructor() {
@@ -14,12 +14,12 @@ export class HelloWorld extends HTMLElement {
         adoptedStyleSheets?: CSSStyleSheet[];
       }
     ).adoptedStyleSheets;
-    if (helloWorldSheet && adopted !== undefined) {
+    if (ckArrayEditorSheet && adopted !== undefined) {
       (
         this.shadow as unknown as ShadowRoot & {
           adoptedStyleSheets: CSSStyleSheet[];
         }
-      ).adoptedStyleSheets = [...adopted, helloWorldSheet];
+      ).adoptedStyleSheets = [...adopted, ckArrayEditorSheet];
     }
   }
 
@@ -57,21 +57,21 @@ export class HelloWorld extends HTMLElement {
     // If constructable stylesheets are not available, ensure a single fallback <style>
     // is injected per-shadow-root. We avoid creating different style content per instance
     // by keeping per-instance differences in CSS custom properties.
-    if (!helloWorldSheet) {
+    if (!ckArrayEditorSheet) {
       // Only inject the fallback style once per shadow root
-      if (!this.shadow.querySelector('style[data-hello-world-fallback]')) {
+      if (!this.shadow.querySelector('style[data-ck-array-editor-fallback]')) {
         const style = document.createElement('style');
-        style.setAttribute('data-hello-world-fallback', '');
-        style.textContent = helloWorldCSS;
+        style.setAttribute('data-ck-array-editor-fallback', '');
+        style.textContent = ckArrayEditorCSS;
         this.shadow.appendChild(style);
       }
     }
 
     // Apply per-instance color via CSS custom property instead of embedding styles.
-    this.style.setProperty('--hw-color', this.color);
+    this.style.setProperty('--ck-array-editor-color', this.color);
 
     this.shadow.innerHTML = `
-      <div class="hello-world">
+      <div class="ck-array-editor">
         <h1 class="message">Hello, ${this.name}!</h1>
         <p class="subtitle">Welcome to our Web Component Library</p>
       </div>
@@ -86,6 +86,8 @@ export class HelloWorld extends HTMLElement {
 }
 
 // Register the custom element
-if (!customElements.get('hello-world')) {
-  customElements.define('hello-world', HelloWorld);
+if (!customElements.get('ck-array-editor')) {
+  customElements.define('ck-array-editor', CkArrayEditor);
 }
+
+
