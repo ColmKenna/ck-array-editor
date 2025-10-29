@@ -1,5 +1,6 @@
 // Export all components
-export { HelloWorld } from './components/hello-world/hello.world';
+export { CkArrayEditor } from './components/ck-array-editor/ck.array.editor';
 
 // Auto-register all components
-import './components/hello-world/hello.world';
+import './components/ck-array-editor/ck.array.editor';
+
