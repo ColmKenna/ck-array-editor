@@ -6,20 +6,20 @@ export default {
   input: 'src/index.ts',
   output: [
     {
-      file: 'dist/hello-world/hello-world.js',
+      file: 'dist/ck-array-editor/ck-array-editor.js',
       format: 'umd',
-      name: 'WebComponentLibrary',
+      name: 'WebComponentLibrary/ck-array-editor',
       sourcemap: true
     },
     {
-      file: 'dist/hello-world/hello-world.esm.js',
+      file: 'dist/ck-array-editor/ck-array-editor.esm.js',
       format: 'es',
       sourcemap: true
     },
     {
-      file: 'dist/hello-world/hello-world.min.js',
+      file: 'dist/ck-array-editor/ck-array-editor.min.js',
       format: 'umd',
-      name: 'WebComponentLibrary',
+      name: 'WebComponentLibrary/ck-array-editor',
       plugins: [terser()],
       sourcemap: true
     }
@@ -33,3 +33,4 @@ export default {
     })
   ]
 };
+
